@@ -3,6 +3,9 @@ import numpy as np
 from moviepy.editor import *
 from moviepy.video.tools.segmenting import findObjects
 
+rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
+                    [-np.sin(a),np.cos(a)]] )
+
 
 def vortexout(screenpos,i,nletters):
     d = lambda t : max(0,t) #damping
