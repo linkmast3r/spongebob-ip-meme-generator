@@ -1,0 +1,7 @@
+wget
+requests
+scipy
+moviepy
+numpy
+opencv-python
+Pillow
