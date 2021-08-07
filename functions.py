@@ -43,6 +43,9 @@ def getIP():
 
 def create_video(image, song):
     
+    rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
+                        [-np.sin(a),np.cos(a)]] )
+    
     # create a video from an image
     img = ["img/" + str(image)]
 
@@ -119,6 +122,8 @@ def make_animate_letters(img, ip, song, color):
 
 
 def make_video(source, ip):
+    rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
+                        [-np.sin(a),np.cos(a)]] )
     clip = VideoFileClip("vid/" + source)
 
     # gets size of the video
