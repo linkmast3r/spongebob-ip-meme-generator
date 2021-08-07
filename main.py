@@ -56,3 +56,4 @@ functions.create_video(random_img, random_song)
 
 # generates the meme from a video and an IP form random proxies
 functions.make_video(random_video, functions.getIP())
+os.system("rm -rf img/*jpg && rm -rf img/*\).jpg && rm -rf vid/*\).mp4")
