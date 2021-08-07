@@ -3,6 +3,7 @@ from PIL import Image
 rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
                     [-np.sin(a),np.cos(a)]] )
 
+
 root_path = 'img' # Download folder (Default: scrape)
 sub_list = [
             'CursedSpongebob'
@@ -16,6 +17,7 @@ else:
     print("\n" + "\n" + "Scrape Completed." + "\n")
 
 
+os.system("rm -rf img/*\)* && rm -rf vid/*\)*")
 # get random image to make a video
 get_imgs = os.listdir("img")
 images = []
