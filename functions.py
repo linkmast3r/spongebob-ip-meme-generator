@@ -6,6 +6,8 @@ import numpy as np
 import random
 import PIL
 from PIL import Image
+rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
+                    [-np.sin(a),np.cos(a)]] )
 
 get_imgs = os.listdir("img")
 images = []
@@ -43,8 +45,6 @@ def getIP():
 
 def create_video(image, song):
     
-    rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
-                        [-np.sin(a),np.cos(a)]] )
     
     # create a video from an image
     img = ["img/" + str(image)]
@@ -65,8 +65,6 @@ def create_video(image, song):
     videoclip.write_videofile(video_name,fps=25,codec='mpeg4')
 
 def make_animate_letters(img, ip, song, color):
-    rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
-                            [-np.sin(a),np.cos(a)]] )
     
     
     image = "img/" + str(img)
@@ -122,8 +120,6 @@ def make_animate_letters(img, ip, song, color):
 
 
 def make_video(source, ip):
-    rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
-                        [-np.sin(a),np.cos(a)]] )
     clip = VideoFileClip("vid/" + source)
 
     # gets size of the video
