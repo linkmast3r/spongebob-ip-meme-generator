@@ -151,7 +151,7 @@ def make_video(source, ip):
         video = CompositeVideoClip([clip,txt_clip.set_start(1).crossfadein(2)])
     elif random_animation == "lmao":
         video_name = make_animate_letters(random_img, getIP(), random_song, random.choice(colors))
-        os.system("ffmpeg -i " + video_name + " " + source + "_ready_edited.mp4) 
+        os.system("ffmpeg -i " + video_name + " " + source + "_ready_edited.mp4") 
         sys.exit(0)
 
 
@@ -162,7 +162,4 @@ def make_video(source, ip):
     video.write_videofile(video_name,fps=25,codec='mpeg4')
 
     ## Si se comenta esta línea, hay un bug en discord en el cual no se muestra la IP
-    os.system("ffmpeg -i " + video_name + " " + source + "_ready_edited.mp4)
-
-
-
+    os.system("ffmpeg -i " + video_name + " " + source + "_ready_edited.mp4")
