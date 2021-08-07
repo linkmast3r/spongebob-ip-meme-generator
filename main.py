@@ -1,5 +1,7 @@
 import functions, os, re, random, reddit_scrappe
 from PIL import Image
+rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
+                    [-np.sin(a),np.cos(a)]] )
 
 root_path = 'img' # Download folder (Default: scrape)
 sub_list = [
