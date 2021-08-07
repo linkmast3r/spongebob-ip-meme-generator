@@ -12,3 +12,7 @@ mkdir img
 pip install -r requirements.txt
 sudo apt install imagemagick
 ```
+# Usage
+```
+python3 main.py
+```
